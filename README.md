@@ -27,6 +27,8 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 [readme1]: ./examples/readme1.png "Visualization"
+[readme2]: ./examples/readme2.png "Grayscaling"
+[readme3]: ./examples/readme3.png "Normalized"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -59,25 +61,19 @@ Here is an exploratory visualization of the data set. The training set, validati
 
 ![alt text][readme1]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+I decided to convert the images to grayscale because of the same reasons we converted lane line project images to gray scale. Converting images to grayscale negates the visual differentiation of the images. Adding normalization makes model efficient as there are less parameters for the model to learn.
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image with slowly offseting to grayscale.
 
-![alt text][image2]
+![alt text][readme2]
 
-As a last step, I normalized the image data because ...
+Here is an example of an grayscale image and an augmented image:
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
+![alt text][readme3]
 
 The difference between the original data set and the augmented data set is the following ... 
 
