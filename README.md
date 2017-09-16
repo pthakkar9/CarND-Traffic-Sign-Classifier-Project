@@ -26,9 +26,10 @@ The goals / steps of this project are the following:
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
+[readme1]: ./examples/readme1.png "Visualization"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
 ### Writeup / README
@@ -37,7 +38,7 @@ The goals / steps of this project are the following:
 
 [Project code is here](https://github.com/pthakkar9/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-[HTML version is here] (https://github.com/pthakkar9/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
+[HTML](https://github.com/pthakkar9/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html) and [PDF](https://github.com/pthakkar9/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.pdf) versions of jupyter notebook are available.
 
 ### Data Set Summary & Exploration
 
@@ -52,11 +53,11 @@ signs data set:
 * The shape of a traffic sign image is 32*32*3
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. The training set, validation set and the test set has 43 different classes representing the german traffic signs. Here are the 10 random images from the data set.
 
-![alt text][image1]
+![alt text][readme1]
 
 ###Design and Test a Model Architecture
 
