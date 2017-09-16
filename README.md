@@ -75,30 +75,35 @@ Here is an example of an grayscale image and an augmented image:
 
 ![alt text][readme3]
 
-The difference between the original data set and the augmented data set is the following ... 
+
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+
+I reused code from lab excercises.
+
+There are two convolution layers and three fully connected layers, with the last being the logits. In between layers 2 and 3, the image gets flattened.
+
+Layer 1 to 2 takes an input of 32x32x1, uses VALID padding, and outputs to a nuerons with dimensions 28x28x6. The convolution filter had shape 5x5x1x6 and the stride was 1 and max pooling was performed.
+
+Layer 2 to 3 takes the input of 28x28x6, uses VALID padding, and outputs to nuerons with dimensions 10x10x16. The covolution filter had shape 1x2x2x1 and the stride was 1 and max pooling was performed.
+
+Layer 3 to 4 takes the input of 10x10x16, uses VALID padding, and outputs to nuerons with dimensions 5x5x16. The covolution filter had shape 1x2x2x1 and the stride was 1 and max pooling was performed.
+
+Next, the image was flattnened and the layers were fully connected. Layer 3 to 4 The input was 5x5x16 which was output to 400 nuerons. Layer 4 to 5 takes 400 nuerons and connects to 120 nuerons. Layer 5 to output, the last layer connects the 84 nuerons to the 43 output classes.
+
+The activation function used in each nueron was the Rectified Linear Unit.
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-My final model consisted of the following layers:
+I trained model on laptop - HP ENVY 17. It has 16 GB ram and i7 processor.
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+Here are the hyperparameters I landed on - 
 
-
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
+`EPOCHS = 50
+`BATCH_SIZE = 156
+`rate = 0.00097
+`mu = 0
+`sigma = 0.1
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
