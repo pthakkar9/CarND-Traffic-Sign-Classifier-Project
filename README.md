@@ -118,8 +118,8 @@ sigma = 0.1
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 100%
-* validation set accuracy of 93% 
+* training set accuracy of 99.7% (**Changed after review**)
+* validation set accuracy of 93.6% (**Changed after review**)
 * test set accuracy of 92%
 
 This solution is based on the LeNet model architecture. This model is to be proven effective in classifying the images. 
@@ -133,6 +133,10 @@ Here are six German traffic signs that I found on the web:
 
 ![alt text][readme4] ![alt text][readme5] ![alt text][readme6] 
 ![alt text][readme7] ![alt text][readme8] ![alt text][readme9]
+
+All six signs were taken from german tour guide site. They are not the pictures but real signs in .gif format. All six of them were part of the training set. 
+
+As these signs are not picture and part of training format, all of them should be easy to classify for the model. If I have to guess, last image might run into some problems because 6 might reas as 5 and it could be classifed as 50 km/h image. (**Added after review**)
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
